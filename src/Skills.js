@@ -7,6 +7,7 @@ import { BiLogoMongodb } from 'react-icons/bi';
 import { BiLogoNodejs } from 'react-icons/bi';
 import { SiMysql } from 'react-icons/si';
 import { SiExpress } from 'react-icons/si';
+import { FaReact } from 'react-icons/fa';
 
 
 const Skills = () => {
@@ -27,6 +28,11 @@ const Skills = () => {
 <div id="grid" style={{color:"#0B75BE"}}>
   <div class="column logos"><DiCss3 style={{width:"40px",height:"40px"}}/></div>
   <div class="column">CSS</div>
+ 
+</div>
+<div id="grid" style={{color:"#4DDDF6"}}>
+  <div class="column logos"><FaReact style={{width:"40px",height:"40px"}}/></div>
+  <div class="column">React</div>
  
 </div>
 <div id="grid" style={{color:"#17AD55"}}>
