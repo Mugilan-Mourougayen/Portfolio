@@ -10,7 +10,7 @@ const Home = () => {
         Hi,<span class="wave">👋</span> I am  <span className='name'>MUGILAN</span>,
       </p>
       <h1 > I am a 
-         <span className='job'> WEB DEVELOPER </span>
+         <span className='job'> Full STACK DEVELOPER </span>
       </h1>
       <div className='about'>
 

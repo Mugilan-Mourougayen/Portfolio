@@ -72,10 +72,10 @@
   top :45%;
   border-radius: 3px;
   background-color: white;
-
  } 
+
 section {
-    height: 70vh;
+    height: 100%;
     padding-top: 20px;
 }
 .about{
