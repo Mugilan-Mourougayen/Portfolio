@@ -1,0 +1,27 @@
+.path { stroke-dasharray: 1000; stroke-dashoffset: 1000; animation: dash infinite 3s linear backwards; animation-iteration-count:infinite;animation-delay: 1s;}
+@keyframes dash {
+  to {
+    stroke-dashoffset: 0;
+    opacity: 0;
+ 
+  }
+}
+.dashed{
+  stroke-dasharray: 0,5000;
+  
+}
+#arrow{animation: arrow 2s  linear forwards; opacity:0;}
+
+
+.prof{
+  float: right;
+
+}
+.arrow{
+  padding-right: 400px;
+}
+.mypic{
+  float: right; 
+  padding-right: 80px;
+  /* filter: drop-shadow(4px 0px 3px rgb(0, 0, 0)); */
+}

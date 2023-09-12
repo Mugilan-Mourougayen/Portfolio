@@ -1,13 +1,15 @@
-body {
+ body {
   margin: 0;
+  height: 100%;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-}
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+  background: rgb(50,49,49);
+  background: -moz-radial-gradient(circle, rgba(50,49,49,1) 0%, rgba(0,0,0,1) 100%);
+  background: -webkit-radial-gradient(circle, rgba(50,49,49,1) 0%, rgba(0,0,0,1) 100%);
+  background: radial-gradient(circle, rgba(50,49,49,1) 0%, rgba(0,0,0,1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#323131",endColorstr="#000000",GradientType=1);
+  color: white;
 }

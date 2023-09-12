@@ -1,0 +1,67 @@
+
+#grid {
+    height: 100px;
+    display: grid;
+    grid-template-columns:  1fr 0fr 0fr;
+
+  }
+  
+  #grid:hover {
+    grid-template-columns: 1fr 1fr 0fr;
+  
+  }
+  
+
+  #grid .column:nth-child(2){
+    display: none;
+    /* color: rgb(222, 214, 0); */
+  }
+  
+  #grid:hover .column:nth-child(2) {
+    display:grid;
+    animation: splitColumn2 1s;
+  }
+
+  #grid:hover .column:nth-child(1) {
+    display:grid;
+    animation: splitColumn1 1s;
+    transform: translateX(25%);
+      
+    
+  }
+
+
+
+  @keyframes splitColumn2 {
+    from {
+      transform: translateX(-50%);
+    }
+    to {
+      transform: translateX(0%);
+    }
+  }
+
+
+  @keyframes splitColumn1 {
+    from {
+      transform: translateX(50%);
+    }
+    to {
+      transform: translateX(25%);
+    }
+  }
+
+
+  .column{
+    font-size: xx-large;
+  }
+
+  .skillwrd:hover{
+    text-decoration: green underline;
+    color: white;
+  }
+
+  .skillwrd{
+  
+    color: green;
+  }

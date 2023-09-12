@@ -2,63 +2,128 @@
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+
+
+
+.wave {
+  animation-name: wave-animation;  /* Refers to the name of your @keyframes element below */
+  animation-duration: 2.5s;        /* Change to speed up or slow down */
+  animation-iteration-count: infinite;  /* Never stop waving :) */
+  transform-origin: 70% 70%;       /* Pivot around the bottom-left palm */
+  display: inline-block;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+@keyframes wave-animation {
+    0% { transform: rotate( 0.0deg) }
+   10% { transform: rotate(14.0deg) }  /* The following five values can be played with to make the waving more or less extreme */
+   20% { transform: rotate(-8.0deg) }
+   30% { transform: rotate(14.0deg) }
+   40% { transform: rotate(-4.0deg) }
+   50% { transform: rotate(10.0deg) }
+   60% { transform: rotate( 0.0deg) }  /* Reset for the last half to pause */
+  100% { transform: rotate( 0.0deg) }
+}
+
+
+
+
+
+
+.parentgrid {
+  display: grid;
+  /* display: flex; */
+  align-items:start;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(3, 1fr);
+  grid-column-gap: 0px;
+  grid-row-gap: 12px;
+
+
   }
-}
-
-.App-header {
-  background-color: #282c34;
-  height: calc(100vh - 50px);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+  p{
+    font-size: xx-large;
+    font-style: oblique;
   }
-  to {
-    transform: rotate(360deg);
+
+  h1{
+    font-weight: 100;
+    font-size: xx-large;
   }
+.logo{
+  width: 30px;
+  height: 30px;
+  color: black;
+}
+
+.logo:hover{
+  width: 30px;
+  height: 30px;
+  color: grey;
+
 }
 
 
-.scroller {
-  max-height: 100vh;
+ .sticker{
+  padding: 7px;
+  display: block;
+  position: sticky;
+  width: 35px;
+  right: 0;
+  top :45%;
+  border-radius: 3px;
+  background-color: white;
 
-  overflow-y: auto;
-  /* scroll-padding-right: 0; */
-  scroll-snap-type: y mandatory ;
+ } 
+section {
+    height: 70vh;
+    padding-top: 20px;
+}
+.about{
+  border: 1px solid;
+  display: block;
+  width: 50%;
+  left: 50%;
+  transform: translate(20%,0);
+  line-height: 2.5em;
+  padding: 10px;
 }
 
-.scroller section {
-  scroll-snap-align: start;
-  height: 100vh;
-}
+.about:hover{
+    animation: flicker 1s infinite alternate;
+    /* background-color: #898989;
+    color: black; */
+    }
+  
+  .name{
+    animation: flicker 5s infinite alternate;
+    color: #fff;
+  }
 
-.mainbox{
-  width: 60vb;
-  border: #61dafb;
-  border-style: dashed;
-  border-radius: 0 60px 0 60px;
-  padding: 50px;
-  /* background: rgb(19,198,211); */
-  border-color: linear-gradient(90deg, rgba(19,198,211,1) 0%, rgba(57,219,241,1) 46%, rgba(123,250,255,1) 100%);
+  /* Flickering animation */
+  @keyframes flicker {
+      
+    0%, 18%, 22%, 25%, 53%, 57%, 100% {
+  
+        text-shadow:
+        0 0 4px #fff,
+        0 0 11px #fff,
+        0 0 19px #fff,
+        0 0 40px #0fa,
+        0 0 80px #0fa,
+        0 0 90px #0fa,
+        0 0 100px #0fa,
+        0 0 150px #0fa;
+    
+    }
+    
+    20%, 24%, 55%,75% {        
+        text-shadow: none;
+    }    
+  }.job{
 
-}
+    color:rgb(173, 246, 221);
+    
+    /* font-family: "Lucida Console", "Courier New", monospace; */
+    text-shadow:0 0 40px #fff;
+  }
+  
