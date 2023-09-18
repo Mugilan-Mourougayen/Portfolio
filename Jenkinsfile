@@ -7,11 +7,5 @@ pipeline {
       }
     }
 
-    stage('update live') {
-      steps {
-        sh 'npm cache clean -f && cd Portfolio && npm cache clean -f'
-      }
-    }
-
   }
 }
