@@ -7,5 +7,11 @@ pipeline {
       }
     }
 
+    stage('update live') {
+      steps {
+        sh 'npm run deploy'
+      }
+    }
+
   }
 }
