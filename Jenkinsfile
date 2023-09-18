@@ -9,7 +9,7 @@ pipeline {
 
     stage('update live') {
       steps {
-        sh 'npm i && npm run deploy'
+        sh 'npm cache clean -f'
       }
     }
 
