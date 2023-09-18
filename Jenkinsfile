@@ -9,7 +9,7 @@ pipeline {
 
     stage('update live') {
       steps {
-        sh 'cd Portfolio && npm run deploy'
+        sh 'cd Portfolio && npm i && npm run deploy'
       }
     }
 
