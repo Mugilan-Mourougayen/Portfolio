@@ -4,6 +4,7 @@ import React from "react";
 import Home from './Home';
 import Skills from './Skills';
 import Sidelogos from './Sidelogos';
+import Experience from './Experience';
 
 function App() {
   return (
@@ -17,7 +18,7 @@ function App() {
       <section>
 <Skills />
       </section>
-
+<Experience/>
       </div> 
   );
 }

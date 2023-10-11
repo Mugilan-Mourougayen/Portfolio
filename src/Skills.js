@@ -5,11 +5,10 @@ import { AiFillHtml5 } from 'react-icons/ai';
 import { DiCss3 } from 'react-icons/di';
 import { BiLogoMongodb } from 'react-icons/bi';
 import { BiLogoNodejs } from 'react-icons/bi';
-import { SiMysql } from 'react-icons/si';
+import Mysql from './mysql.png';
 import { SiExpress } from 'react-icons/si';
 import { FaReact } from 'react-icons/fa';
-
-
+import python from "./python.png"
 const Skills = () => {
   return (
     <div>
@@ -46,7 +45,7 @@ const Skills = () => {
  
 </div>
 <div id="grid" >
-  <div class="column logos"><SiMysql style={{width:"40px",height:"40px"}}/></div>
+  <div class="column logos"><img src={Mysql} style={{width:"60px",height:"40px"}}/></div>
   <div class="column"><span style={{color:"#00618A"}}>My</span><span style={{color:"#E48E00"}}>SQL</span></div>
  
 </div>
@@ -55,6 +54,12 @@ const Skills = () => {
   <div class="column">Express</div>
  
 </div>
+<div id="grid" style={{color:"#grey"}}>
+  <div class="column logos"><img src={python} style={{width:"60px",height:"40px"}}/></div>
+  <div class="column">Python</div>
+ 
+</div>
+
 
 
   </div>
