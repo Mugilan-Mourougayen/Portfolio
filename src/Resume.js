@@ -5,15 +5,16 @@ const Resume = () => {
   return (
     <div>
 
-<button className='custom-button'>
+
         <a
+        className='custom-button'
           href={filePath}
           download="Mugilan_resume.pdf"
           style={{ textDecoration: 'none', color: 'inherit' }}
         >
           Download Resume
         </a>
-      </button>
+
     </div>
   )
 }

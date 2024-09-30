@@ -26,7 +26,3 @@
                 0px 1px 5px 0px rgba(0, 0, 0, 0.12);
   }
 
-  .custom-button:focus {
-    outline: none;
-    box-shadow: 0 0 0 3px rgba(25, 118, 210, 0.5);
-  }
