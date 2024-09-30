@@ -24,11 +24,13 @@ const Experience = () => {
             </p>
         </div>
     </div>
+
+
         <div class="exp">
         <h2 className='job'> Full Stack Developer </h2>
         <div class="exp-desc">
             <h3>FreeLance, Pondicherry</h3>
-            <p> 
+            <p>
             <ul>
   <li>Developed a new web application for managing and tracking various machines supplied to users at multiple locations.</li>
   <li>Led frontend UI/UX design efforts using React and Figma to create an intuitive user interface.</li>
@@ -36,6 +38,25 @@ const Experience = () => {
   <li>Implemented IoT (Internet of Things) functionality using Flask for enhanced machine tracking.</li>
   <li>Utilized a wide range of technologies and tools, including ReactJS, JavaScript, Firebase, ExpressJS, NodeJS, GitHub, MongoDB, Visual Studio Code.</li>
 </ul>
+
+            </p>
+        </div>
+    </div>
+
+    <div class="exp">
+        <h2 className='job'> Software Engineer (Intern)</h2>
+        <div class="exp-desc">
+            <h3>Kyriba, Paris </h3>
+            <p>
+            <ul>
+
+<li>Created on a microservice using Spring boot that link with main application to send mail to the customers.</li>
+<li>Developed template personalization microservice.</li>
+<li>Tools used :  Java ,Spring Boot, Gradle, RabbitMQ, Docker, Jenkins, PostgreSQL and Tempo.</li>
+
+
+
+  </ul>
 
             </p>
         </div>
