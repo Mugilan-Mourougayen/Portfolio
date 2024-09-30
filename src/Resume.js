@@ -1,6 +1,6 @@
 import React from 'react'
 import "./button.css"
-const filePath = '/Mugilan_resume.pdf'
+const filePath = 'https://mugilan-mourougayen.github.io/Portfolio/Mugilan_resume.pdf'
 const Resume = () => {
   return (
     <div>
