@@ -10,7 +10,7 @@ const Home = () => {
       <br />
       <p>
         Hi,<span class="wave">👋</span> I am{" "}
-        <span className="name">MUGILAN</span>,
+        <span className="name"> MUGILAN :</span>,
       </p>
       <h1>
         {" "}
