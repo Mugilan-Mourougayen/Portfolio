@@ -43,7 +43,10 @@ jobs:
           args: >
             -Dsonar.projectKey=${{ github.repository_owner }}_${{ github.event.repository.name }}
             -Dsonar.sources=src
-            -Dsonar.tests=src # <--- CHANGED FROM 'tests' to 'src'
+            # CHANGE: Specify test file patterns within src to avoid overlap with sonar.sources
+            # This ensures only files matching these patterns are considered test files.
+            -Dsonar.tests=src
+            -Dsonar.test.inclusions=src/**/*.test.{js,jsx,ts,tsx},src/**/*.spec.{js,jsx,ts,tsx}
             -Dsonar.javascript.lcov.reportPaths=coverage/lcov.info
             -Dsonar.testExecutionReportPaths=coverage/test-reporter.xml
             # You might need to add -Dsonar.organization if you are using SonarCloud and have an organization
