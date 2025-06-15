@@ -26,25 +26,6 @@
     "eject": "react-scripts eject",
     "test:coverage": "react-scripts test --coverage --watchAll=false"
   },
-  "jest": {
-    "collectCoverageFrom": [
-      "src/**/*.{js,jsx,ts,tsx}",
-      "!src/**/*.d.ts"
-    ],
-    "coveragePathIgnorePatterns": [
-      "/node_modules/"
-    ],
-    "reporters": [
-      "default",
-      [
-        "jest-junit",
-        {
-          "outputDirectory": "coverage",
-          "outputName": "test-reporter.xml"
-        }
-      ]
-    ]
-  },
   "eslintConfig": {
     "extends": [
       "react-app",
