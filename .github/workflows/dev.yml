@@ -15,7 +15,7 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4
         with:
-          fetch-depth: 0
+          fetch-depth: 0 # Mandatory to retrieve historic data for SonarQube
 
       - name: Setup Node.js
         uses: actions/setup-node@v4
@@ -27,10 +27,15 @@ jobs:
         run: npm ci
 
       - name: Run tests with coverage
-        run: npm run test
+        # Ensure this command generates coverage/lcov.info and coverage/test-reporter.xml
+        # and that your test files (like Home.test.js) are indeed in the src directory.
+        run: npm run test:coverage
 
       - name: SonarQube Scan
-        uses: SonarSource/sonarcloud-github-action@master
+        # The workflow warns about deprecation for SonarSource/sonarcloud-github-action@master,
+        # but then actually uses SonarSource/sonarqube-scan-action@v5.0.0, which is good.
+        # I'm updating the `uses` line to reflect the recommended action.
+        uses: SonarSource/sonarqube-scan-action@v5.0.0
         env:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
           SONAR_HOST_URL: ${{ secrets.SONAR_HOST_URL }}
@@ -38,6 +43,8 @@ jobs:
           args: >
             -Dsonar.projectKey=${{ github.repository_owner }}_${{ github.event.repository.name }}
             -Dsonar.sources=src
-            -Dsonar.tests=tests
+            -Dsonar.tests=src # <--- CHANGED FROM 'tests' to 'src'
             -Dsonar.javascript.lcov.reportPaths=coverage/lcov.info
             -Dsonar.testExecutionReportPaths=coverage/test-reporter.xml
+            # You might need to add -Dsonar.organization if you are using SonarCloud and have an organization
+            # -Dsonar.organization=your-organization-key # Uncomment and replace if needed
