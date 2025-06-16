@@ -11,8 +11,8 @@ const Home = () => {
     return evenarr.reduce((pre, curr) => pre * curr);
   };
   var numList = [1, 2, 3, 4, 5, 6];
-  evensum(numList);
-  evenmult(numList);
+  const esnum = evensum(numList);
+  const emnum = evenmult(numList);
 
   return (
     <div className="mainbox">
