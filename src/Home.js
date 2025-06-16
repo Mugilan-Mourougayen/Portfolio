@@ -2,8 +2,18 @@ import React from "react";
 import Profilepi from "./Profilepi";
 
 const Home = () => {
-  let num = 5;
-  const nums = num + 1;
+  const evensum = (arr) => {
+    const evenarr = arr.filter((a) => a % 2 === 0);
+    return evenarr.reduce((pre, curr) => pre + curr);
+  };
+  const evenmult = (arr) => {
+    const evenarr = arr.filter((a) => a % 2 === 0);
+    return evenarr.reduce((pre, curr) => pre * curr);
+  };
+  var numList = [1, 2, 3, 4, 5, 6];
+  evensum(numList);
+  evenmult(numList);
+
   return (
     <div className="mainbox">
       <Profilepi />
