@@ -3,11 +3,21 @@ import Profilepi from "./Profilepi";
 
 const Home = () => {
   const evensum = (arr) => {
-    const evenarr = arr.filter((a) => a % 2 === 0);
+    const evenarr = [];
+    for (let i = 0; i < arr.length; i++) {
+      if (arr[i] % 2 === 0) {
+        evenarr.push(arr[i]);
+      }
+    }
     return evenarr.reduce((pre, curr) => pre + curr);
   };
   const evenmult = (arr) => {
-    const evenarr = arr.filter((a) => a % 2 === 0);
+    const evenarr = [];
+    for (let i = 0; i < arr.length; i++) {
+      if (arr[i] % 2 === 0) {
+        evenarr.push(arr[i]);
+      }
+    }
     return evenarr.reduce((pre, curr) => pre * curr);
   };
   var numList = [1, 2, 3, 4, 5, 6];
